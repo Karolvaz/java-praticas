@@ -1,2 +1,2 @@
 # java-praticas
-Este repositório é exclusivo para exercícios em Java
+Repositório contendo exercícios na linguagem JAVA, desde exercícios sobre fundamentos até exercícios de conteúdos mais avançados
