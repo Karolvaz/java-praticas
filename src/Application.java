@@ -7,8 +7,8 @@ public class Application {
 
             System.out.print("Exercícios JAVA - Fundamentos\n\n");
 
-            fundamentosService.exercicio1();
-            fundamentosService.exercicio2();
+//            fundamentosService.exercicio1();
+//            fundamentosService.exercicio2();
 //            fundamentosService.exercicio3();
 //            fundamentosService.exercicio4();
 //            fundamentosService.exercicio5();
