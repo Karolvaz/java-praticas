@@ -7,8 +7,8 @@ public class Fundamentos {
     // O resultado deverá ser também um número inteiro.
     public int exercicio1(int a, int b, int c) {
 
-        // escreva seu código abaixo:
-        return  //RETORNE O VALOR CERTO HEIN;
+        int teste = (a + b + c) / 3;
+        return teste;
     }
 
     // Faça um algoritmo que leia a idade de uma pessoa em dias.
@@ -16,8 +16,8 @@ public class Fundamentos {
     // Exemplo: 3 anos, 2 meses e 15 dias = 1170 dias.
     public int exercicio2(int ano, int mes, int dia) {
 
-        // escreva seu código abaixo:
-        return  //RETORNE O VALOR CERTO HEIN;
+        int idade = (ano * 365 + mes * 30) + dia;
+        return idade;
     }
 
     // Converta a temperatura em graus celsius para Fahrenheit
@@ -25,7 +25,7 @@ public class Fundamentos {
     public double exercicio3(int celsius) {
 
         // escreva seu código abaixo:
-        return  //RETORNE O VALOR CERTO HEIN;
+        return 0.0;//RETORNE O VALOR CERTO HEIN;
     }
 
     // Retorne um caractere aleatório minúsculo de uma palavra aleatória vindos como parâmetro do método.
@@ -33,7 +33,7 @@ public class Fundamentos {
     public char exercicio4(String palavraSorteada, int posicaoDoCaractereSorteado) {
 
         // escreva seu código abaixo:
-        return  //RETORNE O VALOR CERTO HEIN;
+        return 'a'; //RETORNE O VALOR CERTO HEIN;
     }
 
     // Encontre o resultado da raíz quadrada de "a".
@@ -41,6 +41,6 @@ public class Fundamentos {
     public int exercicio5(int a) {
 
         // escreva seu código abaixo:
-        return  //RETORNE O VALOR CERTO HEIN;
+        return 0;  //RETORNE O VALOR CERTO HEIN;
     }
 }
