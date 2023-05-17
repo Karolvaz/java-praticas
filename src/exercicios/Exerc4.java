@@ -8,7 +8,7 @@ public class Exerc4 {
         //Informar um saldo e imprimir o saldo com reajuste de 1%.
 
         double saldoInicial;
-        float percentual = 1f;
+        int percentual = 100;
         double saldoReajustado;
         double saldoAtualizado;
 
@@ -17,10 +17,10 @@ public class Exerc4 {
         System.out.print("Informe o saldo: ");
         saldoInicial = leitor.nextDouble();
 
-        saldoReajustado = (saldoInicial / percentual) * 100;
+        saldoReajustado = (saldoInicial / percentual);
 
         saldoAtualizado = saldoReajustado + saldoInicial;
-        System.out.print("O saldo atual é de R$ " + saldoAtualizado);
+        System.out.printf("O saldo atual é de R$ %.2f", saldoAtualizado);
 
         leitor.close();
     }
