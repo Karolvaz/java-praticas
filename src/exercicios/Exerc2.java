@@ -5,6 +5,9 @@ import java.util.Scanner;
 public class Exerc2 {
     public static void main(String[] args) {
 
+        //Faça um algoritmo que leia a idade de uma pessoa expressa em anos, meses e dias.
+        //Ex: 3 anos, 2 meses e 15 dias = 1170 dias.
+
         int ano;
         int mes;
         int dia;
