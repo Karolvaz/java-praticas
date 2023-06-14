@@ -1,4 +1,4 @@
-package exercicios;
+package exerciciosAleatórios;
 public class Exerc8 {
     public static void main(String[] args) {
         // Escreva um programa que imprima na tela a soma dos números ímpares entre 0 e 30.
