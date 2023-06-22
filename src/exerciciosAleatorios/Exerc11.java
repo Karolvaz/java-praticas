@@ -10,50 +10,60 @@ public class Exerc11 {
         //b. média de altura dos homens.
         //c. o número de mulheres.
 
-        int sexo;
-        int numMulheres = 0;
-        int numHomens = 0;
-
-        double alturaGrupo;
-        double alturaHomens = 0;
+        final int QTD_PESSOAS = 5;
+        double[] altura = new double[5];
+        String[] sexo = new String[5];
         double maiorAltura = 0;
         double menorAltura = 0;
-        double mediaHomens = 0;
 
-        Scanner leitor = new Scanner(System.in);
+        int i = 0;
+        double somaAlturaDosHomens = 0.0;
+        int qtdHomens = 0;
+        int qtdMulheres = 0;
+        double mediaAlturaDosHomens = 0.0;
 
-        for (int i = 0; i < 5; i++) {
-            System.out.print("Qual o sexo 1 - Mulher | 2 - Homem: ");
-            sexo = leitor.nextInt();
+        Scanner sc = new Scanner(System.in);
 
-            System.out.print("Qual a altura da pessoa: ");
-            alturaGrupo = leitor.nextDouble();
+        for(int index = 0; index < QTD_PESSOAS; index++) {
+            System.out.print("Informe a altura: ");
+            altura[index] = sc.nextDouble();
 
-            if (sexo == 1) {
-                numMulheres++;
-            } else if (sexo == 2) {
-                numHomens++;
-            } else {
-                System.out.println("Opção inválida!");
-            }
+            System.out.print("Informe o sexo: ");
+            sexo[index] = sc.next();
 
-            if (numHomens == alturaGrupo) {
-                alturaHomens++;
-            }
+            if (altura[index] > 0) {
+                if (altura[index] > maiorAltura) {
+                    maiorAltura = altura[index];
+                }
 
-            mediaHomens = numHomens / alturaHomens;
+                if (altura[index] < menorAltura && menorAltura != 0) {
+                    menorAltura = altura[index];
+                }
 
-            if (alturaGrupo > maiorAltura){
-                maiorAltura = alturaGrupo;
-            } else if (menorAltura < alturaGrupo) {
-                menorAltura = alturaGrupo;
+                if (menorAltura == 0) {
+                    menorAltura = altura[index];
+                }
             }
         }
 
-        System.out.println("A maior altura é " + maiorAltura + " e a menor altura do grupo é " + menorAltura);
-        System.out.println("A altura media dos homens é " + mediaHomens + ".");
-        System.out.println("O número de mulheres no grupo é " + numMulheres + ".");
+        do {
+            if (sexo[i].equals("m")) {
+                somaAlturaDosHomens += altura[i];
+                qtdHomens += 1;
+            } else {
+                qtdMulheres += 1;
+            }
+            i++;
+        } while (i < QTD_PESSOAS);
 
-        leitor.close();
+        mediaAlturaDosHomens = somaAlturaDosHomens / qtdHomens;
+
+        System.out.println("A menor altura é " + menorAltura);
+        System.out.println("A maior altura é " + maiorAltura);
+
+        System.out.println("A quantidade de mulheres é de " + qtdMulheres);
+        System.out.println("A média da altura dos homens é de " + mediaAlturaDosHomens);
+
+        sc.close();
     }
 }
