@@ -7,7 +7,6 @@ public class Exerc12 {
 
         double valor1;
         double valor2;
-        int valorOperador;
         int operador;
         double resultado = 0;
 
@@ -17,87 +16,108 @@ public class Exerc12 {
         double divisao;
 
         int valorDigitado;
-        boolean repetirTudo;
+        int repetirTudo;
 
         Scanner leitor = new Scanner(System.in);
+
         System.out.print("Bem-vinda(o) à Karol's Calculator \n");
 
         do {
-            System.out.print("Digite o 1º valor: ");
+            System.out.print("Informe o 1º Valor: ");
             valor1 = leitor.nextDouble();
 
-            System.out.print("Digite o número correspondente à operação, sendo.. \n " +
+            System.out.print("Digite o número correspondente à sua operação, sendo...\n" +
                     "[ 1: + ], [ 2: - ], [ 3: * ], [ 4: / ] : ");
-            valorOperador = leitor.nextInt();
-            operador = valorOperador;
+            operador = leitor.nextInt();
 
-            System.out.print("Digite o 2º valor: ");
-            valor2 = leitor.nextDouble();
-
-            if (operador == 1) {
-                soma = valor1 + valor2;
-                resultado = soma;
-                System.out.printf("Você informou: %.2f + %.2f.\n", valor1, valor2);
-            }
-            if (operador == 2) {
-                subtracao = valor1 - valor2;
-                resultado = subtracao;
-                System.out.printf("Você informou: %.2f - %.2f.\n", valor1, valor2);
-            }
-            if (operador == 3) {
-                multiplicacao = valor1 * valor2;
-                resultado = multiplicacao;
-                System.out.printf("Você informou: %.2f * %.2f.\n", valor1, valor2);
-            }
-            if (operador == 4) {
-                divisao = valor1 / valor2;
-                resultado = divisao;
-                System.out.printf("Você informou: %.2f /+ %.2f.\n", valor1, valor2);
+            if (operador <= 0 || operador >= 5){
+                System.out.println("Operação inválida, repita o procedimento... ");
             }
 
         } while (operador < 1 || operador > 4);
-        System.out.printf("O resultado é %.2f\n", resultado);
+        System.out.print("Informe o 2º Valor: ");
+        valor2 = leitor.nextDouble();
 
+        if (operador == 1){
+            soma = valor1 + valor2;
+            resultado = soma;
+            System.out.printf("Você solicitou por: %.2f + %.2f.\n", valor1, valor2);
+            System.out.printf("O Resultado da operação é: %.2f.\n", resultado);
+        } else if (operador == 2){
+            subtracao = valor1 - valor2;
+            resultado = subtracao;
+            System.out.printf("Você solicitou por: %.2f - %.2f.\n", valor1, valor2);
+            System.out.printf("O Resultado da operação é: %.2f.\n", resultado);
+        } else if (operador == 3){
+            multiplicacao = valor1 * valor2;
+            resultado = multiplicacao;
+            System.out.printf("Você solicitou por: %.2f * %.2f.\n", valor1, valor2);
+            System.out.printf("O Resultado da operação é: %.2f.\n", resultado);
+        } else if (operador == 4){
+            divisao = valor1 / valor2;
+            resultado = divisao;
+            System.out.printf("Você solicitou por: %.2f / %.2f.\n", valor1, valor2);
+            System.out.printf("O Resultado da operação é: %.2f.\n", resultado);
+        } else if (resultado > 10_000){
+            System.out.println("Você estourou o limite.");
+        } if (resultado <0){
+            System.out.println("Não é possível processar número negativo.");
+        }
 
         do{
-            System.out.print("Calcular novamente? [ 1: Sim ], [ 2 - Não ]: ");
+            System.out.print("Calcular novamente? [ 1: Sim ], [ 2 - Qualquer tecla para encerrar. ]: ");
             valorDigitado = leitor.nextInt();
-            repetirTudo = (valorDigitado == 1);
+            repetirTudo = valorDigitado;
 
-             if (repetirTudo){
-                 System.out.print("Digite o 1º valor: ");
-                 valor1 = leitor.nextDouble();
+            if (repetirTudo ==1){
+                do {
+                    System.out.print("Informe o 1º Valor: ");
+                    valor1 = leitor.nextDouble();
 
-                 System.out.print("Digite o número correspondente à operação, sendo.. \n " +
-                         "[ 1: + ], [ 2: - ], [ 3: * ], [ 4: / ] : ");
-                 operador = leitor.nextInt();
+                    System.out.print("Digite o número correspondente à sua operação, sendo...\n" +
+                            "[ 1: + ], [ 2: - ], [ 3: * ], [ 4: / ] : ");
+                    operador = leitor.nextInt();
 
-                 System.out.print("Digite o 2º valor: ");
-                 valor2 = leitor.nextDouble();
+                    if (operador <= 0 || operador >= 5){
+                        System.out.println("Operação inválida, repita o procedimento... ");
+                    }
 
-                 if (operador == 1){
-                     soma = valor1 + valor2;
-                     resultado = soma;
-                     System.out.printf("Você informou: %.2f + %.2f.\n", valor1, valor2);
-                 } if (operador == 2){
-                     subtracao = valor1 - valor2;
-                     resultado = subtracao;
-                     System.out.printf("Você informou: %.2f - %.2f.\n", valor1, valor2);
-                 } if (operador == 3){
-                     multiplicacao = valor1 * valor2;
-                     resultado = multiplicacao;
-                     System.out.printf("Você informou: %.2f * %.2f.\n", valor1, valor2);
-                 } if (operador == 4){
-                     divisao = valor1 / valor2;
-                     resultado = divisao;
-                     System.out.printf("Você informou: %.2f /+ %.2f.\n", valor1, valor2);
-                 }
-                 System.out.println("O resultado da Operação é: " + resultado);
-             }
-              valorDigitado++;
+                } while (operador < 1 || operador > 4);
+                System.out.print("Informe o 2º Valor: ");
+                valor2 = leitor.nextDouble();
 
-        } while (valorDigitado == 2);
+                if (operador == 1){
+                    soma = valor1 + valor2;
+                    resultado = soma;
+                    System.out.printf("Você solicitou por: %.2f + %.2f.\n", valor1, valor2);
+                    System.out.printf("O Resultado da operação é: %.2f.\n", resultado);
+                } else if (operador == 2){
+                    subtracao = valor1 - valor2;
+                    resultado = subtracao;
+                    System.out.printf("Você solicitou por: %.2f - %.2f.\n", valor1, valor2);
+                    System.out.printf("O Resultado da operação é: %.2f.\n", resultado);
+                } else if (operador == 3){
+                    multiplicacao = valor1 * valor2;
+                    resultado = multiplicacao;
+                    System.out.printf("Você solicitou por: %.2f * %.2f.\n", valor1, valor2);
+                    System.out.printf("O Resultado da operação é: %.2f.\n", resultado);
+                } else if (operador == 4){
+                    divisao = valor1 / valor2;
+                    resultado = divisao;
+                    System.out.printf("Você solicitou por: %.2f / %.2f.\n", valor1, valor2);
+                    System.out.printf("O Resultado da operação é: %.2f.\n", resultado);
+                } else if (resultado > 10_000){
+                    System.out.println("Você estourou o limite.");
+                } if (resultado <0){
+                    System.out.println("Não é possível processar número negativo.");
+                }
+
+            }
+            repetirTudo++;
+
+        } while (repetirTudo == 2);
         System.out.println("Obrigado e até a próxima!");
+
 
         leitor.close();
     }
