@@ -11,12 +11,13 @@ public class Exerc3 {
 
         double salarioMinimo = 788.00;
         double salarioUsuario;
-        char repetir = 's';
+        char repetir;
 
         Scanner leitor = new Scanner(System.in);
 
+        System.out.printf("O salário mínimo atual é de: R$ %.2f \n",salarioMinimo);
+
         do{
-            System.out.printf("O salário mínimo atual é de: R$ %.2f \n",salarioMinimo);
             System.out.print("Informe o seu salário atual: ");
             salarioUsuario = leitor.nextDouble();
 

@@ -53,7 +53,7 @@ public class Exerc12 {
                 System.out.println("Não é possível calcular número negativo!");
             } else if (resultado > 10_000) {
                 System.out.println("Você estourou o limite!");
-            } else {
+            }  else {
                 System.out.printf("O resultado da operação é: %.2f\n", resultado);
             }
 

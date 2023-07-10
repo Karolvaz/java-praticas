@@ -24,7 +24,7 @@ public class Exerc2 {
         dia = leitor.nextInt();
 
         int anosEmDias = ano * 365 + mes * 30 + dia;
-        System.out.println("Sua idade em dia é: " + anosEmDias);
+        System.out.println("Sua idade em dias é: " + anosEmDias);
 
         leitor.close();
     }
