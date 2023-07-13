@@ -10,6 +10,7 @@ public class Exerc12 {
         int operador;
         double resultado = 0;
         int repetir;
+        boolean isError;
 
         Scanner leitor = new Scanner(System.in);
 
