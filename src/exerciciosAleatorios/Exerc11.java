@@ -24,6 +24,8 @@ public class Exerc11 {
 
         Scanner sc = new Scanner(System.in);
 
+        System.out.println("Informe a altura e depois informe o sexo, sendo M para Masculino e F para feminino");
+
         for(int index = 0; index < QTD_PESSOAS; index++) {
             System.out.print("Informe a altura: ");
             altura[index] = sc.nextDouble();
@@ -35,11 +37,9 @@ public class Exerc11 {
                 if (altura[index] > maiorAltura) {
                     maiorAltura = altura[index];
                 }
-
                 if (altura[index] < menorAltura && menorAltura != 0) {
                     menorAltura = altura[index];
                 }
-
                 if (menorAltura == 0) {
                     menorAltura = altura[index];
                 }
